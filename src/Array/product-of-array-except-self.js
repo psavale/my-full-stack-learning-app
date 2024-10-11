@@ -6,14 +6,14 @@ function productExceptSelf(nums) {
   let leftProduct = 1;
   for (let i = 0; i < n; i++) {
     result[i] = leftProduct; // Store the product of all the numbers to the left of nums[i]
-    leftProduct *= nums[i]; // Update leftProduct to include nums[i]
+    leftProduct = leftProduct * nums[i]; // Update leftProduct to include nums[i]
   }
   console.log("left side products", result);
   // Second pass: Calculate right products and multiply with left products
   let rightProduct = 1;
   for (let i = n - 1; i >= 0; i--) {
-    result[i] *= rightProduct; // Multiply the left product with the right product
-    rightProduct *= nums[i]; // Update rightProduct to include nums[i]
+    result[i] = result[i] * rightProduct; // Multiply the left product with the right product
+    rightProduct = rightProduct * nums[i]; // Update rightProduct to include nums[i]
   }
 
   return result;

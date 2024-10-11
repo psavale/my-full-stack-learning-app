@@ -2,7 +2,7 @@ function findConsecutiveRepeatingChars(chars) {
   let result = "";
   let count = 1;
   let currentChar = chars[0];
-  for (let i = 1; i < chars.length; i++) {
+  for (let i = 1; i <= chars.length; i++) {
     if (chars[i] === currentChar) {
       count++;
     } else {
@@ -12,10 +12,6 @@ function findConsecutiveRepeatingChars(chars) {
       currentChar = chars[i];
       count = 1;
     }
-  }
-  // Add the last sequence if it was repeating
-  if (count > 1) {
-    result += currentChar + count;
   }
 
   return result;

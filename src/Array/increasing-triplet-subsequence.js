@@ -1,3 +1,7 @@
+/*
+ Use case : j<k<l
+*/
+
 function findTriplateSequences(num) {
   let tripletPresent = false;
   for (var i = 0; i < num.length; i++) {
@@ -14,5 +18,5 @@ function findTriplateSequences(num) {
   }
 }
 
-const num = [1,2,3,4,5];
-console.log(findTriplateSequences(num));
+const num = [5,2,8,4,5,6];
+console.log(findTriplateSequences(num)); // true or false
