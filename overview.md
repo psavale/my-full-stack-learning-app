@@ -16,40 +16,57 @@
 
 ## JavScript
 
-- template literals
-- ES6
-- Stack and Heap
+references - <https://learnjavascript.online/app.html?id=1437>
+
 - What is JavaScript ??
   - JavaScript is a versatile, high-level programming language designed to make web pages interactive. It has grown beyond its initial use case in browsers and is now used for server-side applications, mobile app development, desktop applications, and more. JavaScript’s flexibility and the massive ecosystem of libraries and frameworks make it one of the most popular programming languages in the world.
+  - JavaScript features
+    - Client-Side Language
+    - Object-Oriented
+    - Event-Driven
+    - Cross-Platform
+    - make api call using Ajax and fetch api  ( Api calls can also be made using library called Axios )
+  - Where its used ??
+    - Web application development
+    - Mobile App Development
+    - JavaScript frameworks like React Native or Ionic are used to develop cross-platform mobile apps
+    - Server-Side Scripting
+    - Node.js allows JavaScript to be used for creating scalable server-side applications.
+- Template literals
+- ES6
+- Stack and Heap
+- functions
+- objects
+- Events
+- local storage
+- session storage
+- cookies
+- request headers and bodies, query params
+-
 
-### Features of Javascript
+### Concepts in JavaScript
 
-- Client-Side Language
-- Object-Oriented
-- Event-Driven
-- Cross-Platform
-- make api call using Ajax and fetch api  ( Api calls can also be made using library called Axios )
+- Inheritance
 
-Where it is used ?
-
-- Web application development
-- Mobile App Development
-- JavaScript frameworks like React Native or Ionic are used to develop cross-platform mobile apps
-- Server-Side Scripting
-- Node.js allows JavaScript to be used for creating scalable server-side applications.
-
-Concepts in JavaScript
-
-#### Inheritance -
-
-- JavaScript inheritance is the method through which the objects inherit the properties and the methods from the other objects. It enables code reuse and structuring of relationships between objects, creating a hierarchy where a child object can access features of its parent object. Inheritance in JavaScript can be achieved in the following ways:
-       JavaScript inheritance is the method through which the objects inherit the properties and the methods from the other objects.
-- Super keyword is used in classes to call the properties and methods of the parent class.
-- <https://www.geeksforgeeks.org/javascript-inheritance/>
-
-#### Method overloading
-
-#### Method overrriding
+  - JavaScript inheritance is the method through which the objects inherit the properties and the methods from the other objects. It enables code reuse and structuring of relationships between objects, creating a hierarchy where a child object can access features of its parent object. Inheritance in JavaScript can be achieved in the following ways:
+        JavaScript inheritance is the method through which the objects inherit the properties and the methods from the other objects.
+  - Super keyword is used in classes to call the properties and methods of the parent class.
+  - <https://www.geeksforgeeks.org/javascript-inheritance/>
+-
+- Method overloading
+- Method overrriding
+- Hoisting
+  - Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope
+  - a variable can be used before it has been declared. <https://www.w3schools.com/js/tryit.asp?filename=tryjs_hoisting1>
+  - Using a let variable before it is declared will result in a ReferenceError.
+  - JavaScript only hoists declarations, not initializations. To avoid bugs, always declare all variables at the beginning of every scope.
+  - <https://www.w3schools.com/js/js_hoisting.asp>
+- typeof
+-
+- Things to remember
+  - JavaScript has dynamic types. This means that the same variable can be used to hold different data types.
+  - Strings are written with quotes. You can use single or double quotes:
+  -
 
 ## JavaScript methods
 
@@ -231,7 +248,6 @@ Concepts in JavaScript
   ```
   let obj = {a: 1, b: 2, c: 3};
   let result = Object.entries(obj);  // result is [["a", 1], ["b", 2], ["c", 3]]
-
   ```
 
 - Object.assign()
@@ -241,7 +257,6 @@ Concepts in JavaScript
   let target = {x: 10};
   let source = {y: 20, z: 30};
   Object.assign(target, source);  // target becomes {x: 10, y: 2, z: 30}
-
   ```
 
 - hasOwnProperty()
@@ -249,35 +264,37 @@ Concepts in JavaScript
 
   ```
   let obj = {a: 1, b: 2};
+  let result = obj.hasOwnProperty('a');  // result is true
+  ```
 
- let result = obj.hasOwnProperty('a');  // result is true
+22. Methods in Number
 
   ```
-22. Methods in Number
 - parseInt()
 - toFixed()
 - parseFloat()
 - Math.round()
+  ```
 
 23. Methods in Date Objects
+
+  ```
 - getDate()
 - getFullYear()
 - getMonth()
 - toISOString() 
+  ```
 
 24. Methods in Math Objects
+
+  ```
 - Math.random()
 - Math.floor()
 - Math.abs() - returns the absolute value of a number (without sign)
 - Math.max() - returns the largest number.
-- Math.pow() - 
-  ```
-
-  Math.pow(4, 2);  // Output: 16 (4^2)
-
-  ```
+- Math.pow() - Math.pow(4, 2);  // Output: 16 (4^2)
 - Math.random() - returns a random number between 0 (inclusive) and 1 (exclusive).
-
+```
 
 Data types
 
@@ -286,10 +303,6 @@ Data types
 
 git repo -
 <https://github.com/psavale/my-full-stack-learning-app.git>
-
-Is array a Data Type or Data Structure?
-
-- Array is a data structure because it defines how data is stored and accessed (in a linear, indexed way).
 
 - new versions of ECMAScript introduce new features and syntax enhancements
 - ES5
@@ -302,11 +315,7 @@ Is array a Data Type or Data Structure?
 - <https://caniuse.com/>
 - <https://developer.mozilla.org/en-US/>
 
-What is TypeScript ??
-
-- TypeScript is a superset of JavaScript that adds static typing and other advanced features to the language, allowing developers to write safer and more maintainable code. It was developed and is maintained by Microsoft. TypeScript compiles down to plain JavaScript, meaning that it can run in any environment where JavaScript runs, including browsers, Node.js, and mobile apps.
-
-## NodeJS ???
+## NodeJS
 
 - Node.js is a runtime environment that allows developers to run JavaScript code outside of a web browser, typically on a server. It uses the V8 JavaScript engine (the same engine used by Google Chrome) to execute code, enabling JavaScript to be used for server-side scripting and building scalable, high-performance applications.
 Key Characteristics of Node.js:
@@ -339,7 +348,79 @@ OOPS concepts
 - Time series database ( Prometheus )
   - Use Cases: IoT, financial data, server monitoring, sensor data, and event logs.
 
-# Some of the frequently asked Programs
+## Some of the frequently asked Programs
+
+### Javascript
+
+1. Object.freeze()
+
+- This method is used to makes an object immutable, meaning it prevents the modification of existing property values and prevents the addition or deletion of properties. When an object is frozen, it cannot be changed in any way.
+UseCase - Use Object.freeze() to create constant objects, ensuring their values won’t accidentally change throughout the program.
+- Preventing Accidental Mutations in larger code base.
+- Object.freeze() is shallow, meaning it only applies to the immediate properties of the object. You need to use a recursive function to deeply freeze an object.
+- Object.freeze() only freezes properties, not their values. If a property value is an object or an array, its contents can still be modified unless it is also frozen.
+
+### database
+
+1. What are the different types of SQL commands?
+
+- SQL commands are categorized into four types
+  - DML (Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE
+  - DDL (Data Definition Language): CREATE, ALTER, DROP
+  - DCL (Data Control Language): GRANT, REVOKE
+  - TCL (Transaction Control Language): COMMIT, ROLLBACK, SAVEPOINT
+
+2. What is a subquery?
+
+- A subquery is a query within another query. It is used to perform operations on the result of another query.
+
+### nodeJs
+
+### react
+
+1. What is react?
+
+- React is javascript library to build reusable UI components, manage application state, and handle dynamic data updates efficiently.
+- React uses a virtual DOM to optimize performance
+- hooks allow functional components to manage state and other side effects (e.g., fetching data, subscriptions) without needing to convert them to class components.
+- React Router is a separate library commonly used with React to manage navigation between different pages in a single-page application (SPA). It enables routing by mapping components to different URLs.
+- React is very flexible and can be used with other libraries and frameworks. It focuses on the view layer, so you can integrate it with state management libraries like Redux, UI libraries like Material-UI, or frameworks like Next.js for server-side rendering and static site generation.
+
+### nextJS
+
+1. What is NextJS?
+
+- Next.js is a framework built on top of React that provides a structured way to build server-rendered applications, static websites, and even APIs..
+- Next.js extends React's capabilities by offering solutions to problems React does not handle out of the box, such as SSR, static generation, routing, and more.
+- It enhances the performance, SEO, and development experience for React applications, making it a go-to choice for many developers building modern web applications.
+
+2. What is method chaining?
+3.
+
+### DS ( data structure)
+
+1. Is array a Data Type or Data Structure?
+
+- Array is a data structure because it defines how data is stored and accessed (in a linear, indexed way).
+
+### TypeScript
+
+1.What is TypeScript ??
+
+- TypeScript is a superset of JavaScript that adds static typing and other advanced features to the language, allowing developers to write safer and more maintainable code. It was developed and is maintained by Microsoft. TypeScript compiles down to plain JavaScript, meaning that it can run in any environment where JavaScript runs, including browsers, Node.js, and mobile apps.
+
+### Architecture
+
+- MFE (Micro frontend architecture)
+- Modular architecture
+- Event driven architecture
+- Single page application
+- Progressive Web Application (PWA)
+- Hybrid Architecture (CSR + SSR)
+
+### Observability
+
+### programming
 
 1. longest-substring-without-repeating-characters
 2. Reverse Integer
@@ -354,3 +435,25 @@ OOPS concepts
 11. Reorder List
 12. Reverse Words in a String
 13. Invert Binary Tree
+
+### Web application in general
+
+1. Difference between library and framework?
+
+- Library:
+  - A library is a collection of reusable functions or modules that developers can call to perform specific tasks.
+  - In a library, the developer is in control of the flow of the application. The developer decides when and where to call the library functions.
+  Ex- React, jQuery, Lodash etc.
+- Framework:
+  - A framework is a larger, more comprehensive tool that provides a structure or "skeleton" for your entire application. It dictates how you structure your app, and often comes with predefined patterns and features for specific tasks.
+  - the framework is in control of the flow. The developer writes code that fits into the framework’s structure, but the framework determines when and how that code is executed.
+  - The developer has to follow the framework’s rules and conventions.
+  - framework gives you a structured way to build an entire application.
+  Ex - Angular, Next.js etc.
+
+2. What is Single page applications?
+
+- Is a type of web application that loads a single HTML page and dynamically updates the content as the user interacts with the app, without requiring a full-page reload.
+- SPAs frequently use AJAX (Asynchronous JavaScript and XML) or the Fetch API to retrieve data from the server asynchronously (in the background) and update parts of the UI without refreshing the page.
+- Content is dynamically fetched from the server via API requests (e.g., REST APIs or GraphQL) and rendered on the client-side using JavaScript, allowing the application to load data on demand.
+Examples - Gmail, Facebook, google map, twitter etc.
