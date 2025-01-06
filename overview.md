@@ -42,7 +42,9 @@ references - <https://learnjavascript.online/app.html?id=1437>
 - session storage
 - cookies
 - request headers and bodies, query params
--
+- destructuring
+- promises
+- Clousers
 
 ### Concepts in JavaScript
 
