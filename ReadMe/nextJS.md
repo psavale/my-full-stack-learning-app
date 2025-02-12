@@ -75,6 +75,15 @@ Route Handlers (App Router)
 
 ```
 
+## important usage points
+
+```markdown
+1. You cannot import a Server Component into a Client Component as it's not supported instead you can pass Server Components as a prop to a Client Component.
+
+2. Run times (node.js runtime, edge runtime and serverless)
+- 
+```
+
 ## Vs code extension
 
 ```markdown
@@ -84,4 +93,35 @@ mockapi.io -
 NextJS - https://www.youtube.com/playlist?list=PLC3y8-rFHvwhIEc4I4YsRz5C7GOBnxSJY
 Clerk - Authentication with nextJS projects, Clerk allows sign in , sign up, manage account, protect route based on auth status, signout. 
 -
+```
+
+## Interview questions
+
+```markdown
+1. What is Middleware in Next.js?
+    - Middleware is a function that runs before a request completes. It allows you to modify the response or redirect users dynamically.
+2. What is App Router (app/) vs. Pages Router (pages/) in Next.js 13+?
+3. How do you fetch data in Server Components vs. Client Components?
+4. How does next/image differ from <img>?
+    - Next.js provides the <Image> component from next/image, which is an optimized replacement for the standard <img> tag. It improves performance by handling lazy loading, automatic resizing, optimization, and caching.
+
+5. How to Optimize Performance in Next.js?
+    ✔️ Use ISR (revalidate in getStaticProps)
+    ✔️ Use next/image for better images
+    ✔️ Enable React.lazy() for component lazy loading
+    ✔️ Use Edge Middleware for faster API responses
+6. What happens if getServerSideProps and getStaticProps exist in the same file?
+    ✔️ Can we use localStorage inside getServerSideProps?
+    ✔️ How does Next.js prefetch links with <Link>?
+    ✔️ Difference between getInitialProps and getServerSideProps?
+7. 
+
+
+
+Flatten Deeply Nested Array
+[1,2,3,[4,5,6],[7,8,[9,10,11],12],[13,14,15]]
+
+Debounce in JavaScript (with Code Examples)
+- 
+
 ```
